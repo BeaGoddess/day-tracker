@@ -6,3 +6,9 @@ export interface Habit {
   createdAt: Date;
   updatedAt: Date | null;
 }
+
+export interface HabitEdit {
+  id: string;
+  name: string;
+  date: Date;
+}
