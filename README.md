@@ -1,59 +1,74 @@
 # DayTracker
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.6.
+DayTracker is a project built for learning Angular, designed to help organize and keep track of daily tasks. The app currently lets you add, monitor, and remove tasks.
 
-## Development server
+As a future feature, support habits created by repeats, such as setting up a lesson once a week so it automatically appears every Monday or any other selected day.
 
-To start a local development server, run:
+## Features
 
-```bash
-ng serve
+- **Add, edit, and delete daily habits** (all stored via localStorage)
+- **Confirmation dialogs** for destructive actions
+
+## Project Folder Structure
+
+```
+src/
+  app/
+    components/
+    pages/
+    types/
+    utils/
+    services/                             
+    app.config.ts            
+    app.routes.ts            
+    app.ts                   
+  assets/                    
+  environments/              
+angular.json, package.json   
+...
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## How to Run the Project
 
-## Code scaffolding
+1. **Install dependencies**
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+   If you haven’t already, install the project dependencies via npm:
 
-```bash
-ng generate component component-name
-```
+   ```bash
+   npm install
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2. **Start the development server**
 
-```bash
-ng generate --help
-```
+   Run:
 
-## Building
+   ```bash
+   ng serve
+   ```
 
-To build the project run:
+   or (if you prefer using npm):
+
+   ```bash
+   npm start
+   ```
+
+   The app will be available at [http://localhost:4200/](http://localhost:4200/).
+
+## Building for Production
+
+To create an optimized production build, run:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Output files will appear in the `dist/` directory.
 
-## Running unit tests
+## Running Tests
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+- **Unit tests:**  
+  Uses [Vitest](https://vitest.dev/).
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+  ```bash
+  ng test
+  ```
