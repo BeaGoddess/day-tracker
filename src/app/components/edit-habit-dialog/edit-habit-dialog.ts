@@ -35,7 +35,7 @@ import { toDateInputValue } from '../../utils/date';
             type="text"
             [value]="nameInput()"
             (input)="nameInput.set($any($event.target).value)"
-            class="mt-1 w-full rounded-md border border-pink-600/50 bg-background px-2 py-1 text-sm text-text outline-none focus:border-pink-400"
+            class="mt-1 w-full rounded-md border border-pink-600/50 bg-background px-2 py-1 text-base text-text outline-none focus:border-pink-400"
           />
         </label>
         <label class="mb-4 block text-xs text-text-muted">
@@ -44,7 +44,7 @@ import { toDateInputValue } from '../../utils/date';
             type="date"
             [value]="dateInput()"
             (input)="dateInput.set($any($event.target).value)"
-            class="mt-1 w-full rounded-md border border-pink-600/50 bg-background px-2 py-1 text-sm text-text outline-none focus:border-pink-400"
+            class="mt-1 w-full rounded-md border border-pink-600/50 bg-background px-2 py-1 text-base text-text outline-none focus:border-pink-400"
           />
         </label>
         <div class="flex justify-end gap-2">

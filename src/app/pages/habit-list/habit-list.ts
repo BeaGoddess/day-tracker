@@ -33,12 +33,15 @@ import { daysBetween } from '../../utils/date';
     </div>
 
     <div
-      class="relative overflow-hidden rounded-2xl border border-pink-600/50 bg-surface pt-8 pb-6 flex-1 shadow-2xl shadow-black/60"
-      style="background-image: linear-gradient(90deg, transparent 40px, var(--color-pink-700) 40px, var(--color-pink-700) 42px, transparent 42px),
-linear-gradient(color-mix(in srgb, var(--color-pink-500) 10%, transparent) .1em, transparent .1em);
-background-size: 100% 30px;"
+      class="relative overflow-hidden rounded-2xl border  border-pink-600/50 bg-surface  flex-1 shadow-2xl shadow-black/60 flex flex-col"
     >
-      <ul class="px-6 pl-14 text-text">
+      <ul
+        class="px-6 pl-14 pt-8 pb-6 text-text flex-1 overflow-y-auto min-h-0"
+        style="background-image: linear-gradient(90deg, transparent 40px, var(--color-pink-700) 40px, var(--color-pink-700) 42px, transparent 42px),
+linear-gradient(color-mix(in srgb, var(--color-pink-500) 10%, transparent) .1em, transparent .1em);
+background-size: 100% 30px;
+background-attachment: local;"
+      >
         @for (habit of filteredHabits(); track habit.id) {
           <li class="group relative flex h-7.5 items-center gap-2 text-sm">
             <button
@@ -71,7 +74,7 @@ background-size: 100% 30px;"
             </span>
 
             <div
-              class="absolute top-0 right-0 flex h-full flex-row items-center gap-1 opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100"
+              class="absolute top-0 right-0 flex h-full flex-row items-center gap-1 md:opacity-0 transition-opacity duration-200 ease-out md:group-hover:opacity-100"
             >
               <button
                 type="button"
@@ -123,7 +126,7 @@ background-size: 100% 30px;"
     <app-edit-habit-dialog (saved)="onHabitSaved($event)" />
   `,
   host: {
-    class: 'max-w-100 w-full max-h-100 flex-col flex flex-1',
+    class: 'max-w-100 w-full max-h-100 flex-col flex flex-1 px-4 sm:px-0',
   },
 })
 export class HabitList {

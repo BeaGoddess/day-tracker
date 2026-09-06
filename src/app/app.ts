@@ -8,7 +8,7 @@ import { HabitList } from './pages/habit-list/habit-list';
   styleUrl: './app.css',
   templateUrl: './app.html',
   host: {
-    class: 'flex flex-col justify-center items-center min-h-screen',
+    class: 'flex flex-col justify-center items-center min-h-dvh',
   },
 })
 export class App {
